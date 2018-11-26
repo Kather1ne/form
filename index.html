@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/font.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/jquery.kladr.min.js"></script>
+	<script src="js/validation.js"></script>
+	<title>test</title>
+</head>
+<body>
+	<form class="order-form" action="">
+		<div class="head">
+			<a href="" class="btn-back">Назад</a>
+			<div class="title">Оформление заказа</div>
+		</div>
+		<div class="validation-items">
+			<div class="item-label">Имя и фамилия <span>*</span></div>
+			<div class="item" data-name="surname" data-err="false">
+				<input class="item-input" type="text" name="surname" placeholder="Введите ваше имя и фамилию">
+			</div>
+			<div class="item-label">Телефон <span>*</span></div>
+			<div class="item" data-name="number" data-err="false">
+				<input class="item-input" type="text" name="number" placeholder="Введите ваш телефон">
+			</div>
+			<div class="item-label">Email <span>*</span></div>
+			<div class="item" data-name="email" data-err="false">
+				<input class="item-input" type="text" name="email" placeholder="Введите ваш Email">
+			</div>
+			<div class="item-label">Город доставки <span>*</span></div>
+			<div class="item" data-name="city" data-err="false">
+				<input class="item-input" type="text" name="city" placeholder="Введите ваш город">				
+			</div>
+			<div class="item-label">Адрес <span>*</span></div>
+			<div class="item" data-name="adress" data-err="false">
+				<input class="item-input" type="text" name="adress" placeholder="Введите ваш адрес">
+			</div>
+			<div class="item-label">Способ доставки <span>*</span></div>
+			<div class="radio-items">				
+				<div class="radio-item price">
+					<input class="radio" name="delivery" type="radio" name="mail" id="mail" checked>
+					<label for="mail">Почта России</label>
+					<span>Бесплатно</span>
+				</div>
+				<div class="radio-item price">
+					<span>Бесплатно</span>
+					<input class="radio" name="delivery" type="radio" id="pickup">
+					<label for="pickup">Самовывоз СДЭК<br><span class="description">Заберите ваш заказ с ближайшего пункта выдачи заказа</span><br><span class="description"> компании СДЭК. </span><span class="pickup-places">Выберите пункт выдачи заказов</span></span></label>
+				</div>
+				<div class="radio-item price">
+					<input class="radio" name="delivery" type="radio" id="delivery">
+					<label for="delivery">Курьерская доставка СДЭК<br><span class="description">В удобное для вас время</span></label>
+					<span>450 руб.</span>
+				</div>
+			</div>
+		</div>
+		<div class="order-submit">
+			<div class="submit-items">
+				<div class="price-item price">Сумма<span>1430 руб.</span></div>
+				<div class="price-item price">Доставка<span>0 руб.</span></div>
+				<div class="price-item price">Скидка<span>440 руб.</span></div>
+			</div>
+			<div class="promo">
+				<div class="promo-title">Промо код</div>
+				<input type="text">
+			</div>
+			<div class="bill">
+				<div class="bill-title">Итого к оплате:</div>
+				<div class="bill-sum">990 руб.</div>
+				<input class="btn-submit" type="submit" value="Оплатить заказ">
+				<div class="agreement">Нажимая на кнопку вы соглашаетесь с условиями обработки персональных данных</div>
+			</div>
+		</div>
+	</form>	
+</body>
+</html>

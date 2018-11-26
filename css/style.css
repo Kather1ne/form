@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'ProximaNova', sans-serif;
+  font-size: 18px;
+}
+body {
+  background: #fff6ea;
+}
+.order-form {
+  width: 1095px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding-top: 45px;
+  align-items: flex-start;
+}
+.head {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 45px;
+}
+.head .btn-back {
+  width: 95px;
+  height: 32px;
+  background: #886e9b;
+  border-radius: 35px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  line-height: 33px;
+  margin-right: 25px;
+  font-size: 15px;
+}
+.head .title {
+  font-family: 'a_FuturaRound', sans-serif;
+  font-size: 25px;
+  color: #886e9b;
+}
+.validation-items {
+  width: 740px;
+  margin-right: 40px;
+  display: inherit;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.item {
+  width: 70%;
+  position: relative;
+}
+.item-label {
+  width: 29%;
+  margin-bottom: 30px;
+  color: #8a9191;
+}
+.item-label span {
+  color: #FF5751;
+  font-size: 16px;
+}
+.item-input {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px #EDE6DE;
+  border: none;
+  padding: 15px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+}
+.item-input:focus {
+  outline: none;
+  border: 2px solid #EDE6DE;
+}
+.item-input::placeholder {
+  color: #8a9191;
+}
+.item::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 16px;
+  transform: translateY(-35px);
+  border-radius: 50px;
+  visibility: hidden;
+  font-size: 0.8em;
+  color: #8a9191;
+}
+.item.empty::after,
+.item.empty.err[data-err=false]::after {
+  content: "Введите данные";
+  visibility: initial;
+}
+.item.err[data-name="surname"]::after {
+  content: "Пожалуйста, введите Имя и Фамилию";
+  visibility: initial;
+}
+.item.err[data-name="number"]::after {
+  content: "Пожалуйста, введите корректное значение номера";
+  visibility: initial;
+}
+.item.err[data-name="email"]::after {
+  content: "Пожалуйста, введите корректное значение email";
+  visibility: initial;
+}
+.item.err[data-name="city"]::after {
+  content: "Пожалуйста, выберите город из списка";
+  visibility: initial;
+}
+.item.empty .item-input,
+.item.err .item-input {
+  border: 2px solid red;
+}
+.item #kladr_autocomplete {
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  background: #fff;
+}
+.item #kladr_autocomplete ul {
+  list-style: none;
+}
+.item #kladr_autocomplete ul li {
+  padding: 10px;
+  border: 1px solid #EDE6DE;
+  cursor: pointer;
+}
+.item #kladr_autocomplete ul li:hover {
+  background: #EDE6DE;
+}
+.radio-items .radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+}
+.radio-items .radio-items {
+  width: 70%;
+}
+.radio-items .radio + label {
+  position: relative;
+  padding: 0 0 0 35px;
+  cursor: pointer;
+}
+.radio-items .radio + label:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e9e9e9;
+  border-radius: 50%;
+  background: #FFF;
+}
+.radio-items .radio + label:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #886e9b;
+  opacity: 0;
+  transition: .2s;
+}
+.radio-items .radio:checked + label:after {
+  opacity: 1;
+}
+.price {
+  border-bottom: 1px dashed #8a9191;
+  padding: 10px 0;
+  font-family: 'ProximaNovaB', sans-serif;
+  color: #686868;
+  font-size: 14px;
+}
+.price label,
+.price span {
+  font-family: inherit;
+  line-height: 1.2;
+}
+.price span {
+  color: #886e9b;
+  float: right;
+}
+.price .description,
+.price .pickup-places {
+  color: inherit;
+  float: initial;
+  margin-left: 35px;
+  font-size: 14px;
+  font-family: 'ProximaNova', sans-serif;
+}
+.price .pickup-places {
+  color: #886e9b;
+  border-bottom: 1px dashed #886e9b;
+  margin-left: 0;
+}
+.order-submit {
+  width: 310px;
+  background: #fff;
+  border: 1px solid #f5f0eb;
+  border-bottom: transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 2px #EDE6DE;
+}
+.submit-items {
+  padding: 25px 15px 20px;
+}
+.promo {
+  padding: 0 15px;
+  margin-bottom: 35px;
+}
+.promo-title {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.promo input {
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #e9e9e9;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.promo input:focus {
+  outline: none;
+}
+.bill {
+  background: #F4F4F4;
+  padding: 25px 15px 15px;
+  text-align: center;
+}
+.bill-title {
+  color: gray;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.bill-sum {
+  font-size: 30px;
+  color: #886e9b;
+  margin-bottom: 10px;
+  font-family: 'ProximaNovaB', sans-serif;
+}
+.bill .btn-submit {
+  height: 40px;
+  width: 195px;
+  background: #FF9600;
+  color: #fff;
+  line-height: 40px;
+  border: none;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.bill .btn-submit:focus {
+  outline: none;
+}
+.bill .agreement {
+  font-size: 13px;
+  color: #8a9191;
+}
